@@ -66,13 +66,12 @@ def only_three_chance_guessing_game():
 # 함수 - 사전 순서로 정렬된 단어 리스트에서 정답 맞추기 게임
 def string_guessing_game():
     answer_str_list = sorted(['lddf', 'ewrf', 'fefe', 'hsw', 'nafe', 'ddfh', 'dfhe']) # 사전순서대로 리스트 정렬
+    print(f'단어 리스트는 다음과 같습니다.: {answer_str_list}')
 
     # 랜덤한 단어 결정하기 (list, index 활용)
     answer_str_list_index_count = len(answer_str_list) - 1 # count가 아니라 len를 사용해야 인덱스 범위 구할 수 있음
     answer_str_list_index = random.randint(0, answer_str_list_index_count) # 인덱스 결정하기
     selected_answer_str = answer_str_list[answer_str_list_index] # 선택된 정답 단어
-
-    print(f'단어 리스트는 다음과 같습니다.: {answer_str_list}')
 
     while True:
         guess_str = input('추측한 단어를 입력하세요: ')

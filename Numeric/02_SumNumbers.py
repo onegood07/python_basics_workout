@@ -53,18 +53,19 @@ test_strings_list = ['apple', 'banana', 'mango', 'grape', 'shinemuscat', 'peach'
 print(f"튜플로 변환한 결과: {input_list_return_tuple(test_strings_list)}")
 
 
-
+# 함수 - 여러 자료형으로 된 리스트를 매개변수로 받아서, 숫자 또는 숫자로 변환가능한 값을 전부 더하는 함수
 def input_any_list_return_sum(input_list):
     input_list_sum = 0
     
     for item in input_list:
         if type(item) == int or type(item) == float:
             input_list_sum += item
-        elif type(item) == str:
-            if item.isdigit():
+        elif type(item) == str: # 문자열인지 확인
+            if item.isdigit(): # 문자열을 숫자로 변환 가능한지 확인
                 input_list_sum += int(item)
     
     return input_list_sum
 
+# 실행
 test_any_list = ['apple', 'kdk', 1, 90, 3.14, '9', '71', 3, 'hello']
 print(input_any_list_return_sum(test_any_list))
