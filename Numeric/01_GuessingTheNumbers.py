@@ -14,7 +14,7 @@ def only_input_positive_int_guessing_game():
         if guess_number > answer_number:
             print("정답보다 높아요.")
         elif guess_number < answer_number:
-            print("정답보다 높아요.")
+            print("정답보다 낮아요.")
         else:
             print("정답입니다!")
             break # 정답을 맞추면 while문 탈출
