@@ -35,8 +35,8 @@ def input_float_and_int(input_float, before, after):
 
     # before로 부동소수점 정수부분 추출하기
     before_float = list(split_float_list[0])
-    output_before_float_list = before_float[-int(before):] # 인덱싱 유의
-    output_before_float = ''.join(output_before_float_list) # .join(list)는 list 안의 인자들을 합쳐줌
+    output_before_float_list = before_float[-int(before):] # 인덱싱 유의, '-'를 사용해서 뒤에서부터 인덱싱
+    output_before_float = ''.join(output_before_float_list) # .join(s)는 모든 요소가 문자열로 구성된 시퀀스의 요소들을 합쳐줌 
 
     # after로 소수점 아래 부분 추출하기
     after_float = list(split_float_list[1])
@@ -46,14 +46,15 @@ def input_float_and_int(input_float, before, after):
     print(f"계산된 값은 {output_before_float}.{output_after_float} 입니다.")
 
 # 실행
-# input_float, before, after = input('부동소수점, before, after 값 입력하기: ').split(",")
+# input_float, before, after = input('[1안] 부동소수점, before, after 값 입력하기: ').split(",")
 # input_float_and_int(input_float, before, after)
 
 
 # [2번] 파이썬에서 문자열이 시퀀스라 인덱싱이 가능함을 알게 되고 작성한 코드
 def input_float_and_int(input_float, before, after):
-    before_float, after_float = input_float.split(".") # 
+    before_float, after_float = input_float.split(".") # .split() 사용으로 '.'을 기준으로 리스트 형태로 분리된 후, 각 변수에 문자열 형태로 저장됨
     print(f"계산된 값은 {before_float[-int(before):]}.{after_float[:int(after)]} 입니다.")
 
-input_float, before, after = input('부동소수점, before, after 값 입력하기: ').split(",")
+# 실행
+input_float, before, after = input('[2안] 부동소수점, before, after 값 입력하기: ').split(",")
 input_float_and_int(input_float, before, after)

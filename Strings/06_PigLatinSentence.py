@@ -23,14 +23,12 @@ print(pig_latin_sentence('this is a test translation'))
 
 def split_str_list_return_new_list(words_list):
     output_list = []
-    words_split_list = ' '.join(words_list).split() # 리스트 각 요소를 전부 담은 하나의 리스트로 변경
-    print(type(words_split_list))
+    all_words_list = ' '.join(words_list).split() # 공백 기준으로 리스트 안 요소를 전부 담은, 하나의 리스트로 변경
+
     for count in range(len(words_list)):
-        output_list.append(words_split_list[count::len(words_list)])
+        output_list.append(all_words_list[count::len(words_list)]) # 입력받은 리스트 범위에 맞춰서 간격마다 output_list에 추가(append)
 
     return output_list
 
 # 실행      
 print(split_str_list_return_new_list(['abc def ghi', 'jkl mno pqr', 'stu vmx yz']))
-
-
