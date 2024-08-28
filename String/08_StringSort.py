@@ -17,7 +17,7 @@ def sort_letters_in_words(str):
     for word in split_str_list:
         output.append(''.join(sorted(word)))
     
-    return ', '.join(output)
+    return ', '.join(output) 
 
 # 실행
 str = input('문자열을 입력하세요: ')

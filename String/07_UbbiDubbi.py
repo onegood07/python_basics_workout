@@ -16,33 +16,32 @@ def ubbi_dubbi(words):
     return ''.join(output_words)
 
 # 실행
-# words = input('우비두비 규칙으로 만들 단어 입력하기: ')
-# print(ubbi_dubbi(words))
+words = input('기본 우비두비 규칙으로 만들 단어 입력하기: ')
+print(ubbi_dubbi(words))
 
 
 # 함수 - 대문자화(첫 글자 대문자, 이후 소문자)한 단어가 입력되면 우비두비 결과도 대문자화로 처리하는 함수
 def upper_ubbi_dubbi(words):
-    if words[0].isupper() and words[1:].islower(): # 대문자화인지 확인
-        output_word_list = []
+    if words[0].isupper() and words[1:].islower(): # 대문자화인지 확인, if문 and 사용
+        word_list = []
 
         for word in words:
-            if word in 'aeiouAEIOU':
-                lower_word = word.lower()
-                output_word_list.append(f"ub{lower_word}")
+            if word in 'aeiouAEIOU': # 한 글자씩 모음인지 확인. (주의) 대문자 모음도 확인해야함
+                lower_word = word.lower() # 대문자 -> 소문자 전환
+                word_list.append(f"ub{lower_word}") # 우비두비 적용
             else:
-                output_word_list.append(word)
+                word_list.append(word)
         
-        output_word = ''.join(output_word_list)
+        output_word = ''.join(word_list) # 리스트 형식을 문자열로 변환
         
-        if output_word[0].islower():
-            output = output_word[0].upper()
-            return  output + output_word[1:]
+        if output_word[0].islower(): # 문자열의 첫 글자가 소문자일 경우
+            return output_word[0].upper() + output_word[1:] # 대문자인 첫 글자 + 나머지 소문자 return
 
         return output_word
 
-    else:
+    else: # 입력된 단어가 대문자화가 아닌 경우
        return "여긴 대문자화만 처리하니 이 우비두비 말고 다른 우비두비를 찾아보세요."
 
 # 실행
-words = input('우비두비 규칙으로 만들 단어 입력하기: ')
+words = input('대문자화 우비두비 규칙으로 만들 단어 입력하기: ')
 print(upper_ubbi_dubbi(words))
