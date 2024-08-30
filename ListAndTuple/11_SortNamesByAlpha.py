@@ -45,4 +45,12 @@ def sort_by_vowel_count(str_list):
             
     return sorted(str_list, key= vowel_count)
 
+
+# 함수 - 위에 있는 걸 GPT가 만든 함수
+def sort_by_vowel_count_by_gpt(*strings):
+    def vowel_count(s):
+        return sum(1 for char in s if char in 'aeiouAEIOU')  # 이렇게 하나로 합쳐서 하는 것도 가능하다는 점 알아두기, sum을 이용하는 것도 기억하기
+    
+    return sorted(strings, key=vowel_count)
+
 print(sort_by_vowel_count(['apple', 'banana', 'peach']))
