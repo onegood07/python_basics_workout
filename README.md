@@ -3,4 +3,5 @@
 ### 목차
 ~~1. 자료형 - Numeric (4번 추후에 하기)~~  
 ~~2. 문자열 - Stirng~~  
-**3. 리스트와 튜플 - ListAndTupple**
+~~3. 리스트와 튜플 - ListAndTupple~~
+4. 딕셔너리와 세트 - DictionaryAndSet
