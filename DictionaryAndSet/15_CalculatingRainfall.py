@@ -20,6 +20,8 @@ def get_rainfall():
 # 실행
 # get_rainfall()
 
+
+# 함수 - 모든 도시의 강수량 합계만 출력하는 것이 아니라 평균도 함께 출력하는 함수
 def get_rainfall_avg_sum():
     # rainfall = {'city': {'sum':20, 'avg_count':3}}
 
@@ -33,6 +35,7 @@ def get_rainfall_avg_sum():
 
         rain_mm = int(input('도시의 강수량을 입력하세요: '))
 
+        # 중첩 딕셔너리 선언
         # rainfall.setdefault(city_name, {'sum': 0, 'avg_count': 0}) 이렇게 초기화해도 됨
         if city_name not in rainfall:
             rainfall[city_name] = {'sum': 0, 'avg_count': 0}
