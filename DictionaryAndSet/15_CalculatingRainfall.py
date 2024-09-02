@@ -23,8 +23,6 @@ def get_rainfall():
 
 # 함수 - 모든 도시의 강수량 합계만 출력하는 것이 아니라 평균도 함께 출력하는 함수
 def get_rainfall_avg_sum():
-    # rainfall = {'city': {'sum':20, 'avg_count':3}}
-
     rainfall = {}
 
     while True:
@@ -46,6 +44,7 @@ def get_rainfall_avg_sum():
     for city, rain_info in rainfall.items():
         print(f"{city} 도시의 강수량 합계는 {rainfall[city]['sum']}이고 강수량 평균은 {rainfall[city]['sum']/rainfall[city]['avg_count']}입니다.")
 
+# 실행
 get_rainfall_avg_sum()
 
 
