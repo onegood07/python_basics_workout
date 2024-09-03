@@ -12,9 +12,9 @@ def dictdiff(first, second):
     return output
 
 # 실행
-# dict1 = {'a': 1, 'b': 2, 'c': 3}
-# dict2 = {'a': 1, 'b': 2, 'c': 4}
-# print(dictdiff(dict1, dict2)) 
+dict1 = {'a': 1, 'b': 2, 'c': 3}
+dict2 = {'a': 1, 'b': 2, 'c': 4}
+print(dictdiff(dict1, dict2)) 
 
 
 
@@ -30,7 +30,7 @@ def pair_to_dict(*args):
     return output
 
 # 실행
-# print(pair_to_dict('a', 1, 'b', 2))
+print(pair_to_dict('a', 1, 'b', 2))
 
 
 # 함수 - 매개변수로 1개의 딕셔너리와 1개의 함수를 입력받아 매개변수로 받은 딕셔너리 값을 매개변수로 받은 함수에 전달하고 리턴값에 따라 키-값 쌍 분배
@@ -39,19 +39,19 @@ def dict_partition(dictionary, function):
     output = ({}, {})
 
     for key, value in dictionary.items():
-        print(f"{key} {value}")
-        if function:
+        if function(dictionary):
             output[0][key] = value
         else:
             output[1][key] = value
 
     return output
 
-def yes():
-    return True
-
-def no():
+def vowel_in(dic):
+    for key, value in dic.items():
+        if key in 'aeiou':
+            return True
+    
     return False
 
 # 실행
-print(dict_partition({'a': 1}, no()))
+print(dict_partition({'a': 1}, vowel_in))

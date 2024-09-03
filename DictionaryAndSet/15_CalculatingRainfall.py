@@ -46,8 +46,3 @@ def get_rainfall_avg_sum():
 
 # 실행
 get_rainfall_avg_sum()
-
-
-    
-
-        
