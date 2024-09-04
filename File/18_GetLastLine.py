@@ -69,7 +69,7 @@ def count_vowel_word():
        if not line:
            continue
 
-       for key, value in word_dic.items(): # if any(char in vowel_set for char in word_dic): 이런 형식도 가능함
+       for key, value in word_dic.items():
            if key in 'aeiou':
                vowel_count += 1
 
