@@ -13,21 +13,18 @@ def print_scores(dirname):
                 for subject, subject_score in file.items():
                     scores[filename].setdefault(subject, [])
                     scores[filename][subject].append(subject_score)
-                    print(scores[filename][subject])
         
-        
-    
-    # for one_class in scores:
-    #     print(one_class)
-    #     for subject, subject_score in scores[one_class].items():
-    #         print(subject_score)
-    #         min_scores = min(subject_score)
-    #         max_scores = max(subject_score)
-    #         avg_scores = (sum(subject_score) / len(subject_score))
+    for one_class in scores:
+        print(one_class)
+        for subject, subject_score in scores[one_class].items():
+            print(subject_score)
+            min_scores = min(subject_score)
+            max_scores = max(subject_score)
+            avg_scores = (sum(subject_score) / len(subject_score))
 
-    #         print(subject)
-    #         print(f"\tmin{min_scores}")
-    #         print(f"\tmax{max_scores}")
-    #         print(f"\tavg{avg_scores}")
+            print(subject)
+            print(f"\tmin{min_scores}")
+            print(f"\tmax{max_scores}")
+            print(f"\tavg{avg_scores}")
 
 print_scores("/Users/kdk/Desktop/scores")
