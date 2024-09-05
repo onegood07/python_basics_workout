@@ -43,5 +43,5 @@ def each_line_sum_avg(filename):
 
             print(f"sum: {output_sum}, avg: {output_sum/10}")
 
+# 실행
 each_line_sum_avg('/Users/kdk/Desktop/ex.csv')
-
