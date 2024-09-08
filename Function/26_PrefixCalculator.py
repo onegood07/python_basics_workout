@@ -36,14 +36,17 @@ def many_calc(args):
         '**': operator.pow,
         '%': operator.mod
     }
-
+    # split 활용해서 공백 기준 분리해서 리스트에 넣기
     using_list = args.split()
 
+    # op == 연산자, 나머지는 int 리스트에 담기 (리스트 내포 활용)
     op = using_list[0]
     using_ints = [int(x) for x in using_list[1:]]
 
+    # 연산을 위한 첫번째 숫자 선정
     output = using_ints[0]
 
+    # 연산 진행
     for one_int in using_ints:
         output = operations[op](output, one_int)
 

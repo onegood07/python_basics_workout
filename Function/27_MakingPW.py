@@ -38,10 +38,6 @@ symbol_pw = create_password_generator('!@#$%')
 alpha_in = alpha_pw(5)
 symbol_in = symbol_pw(5)
 
-# pw = alpha_in + symbol_in
-pw = 'ABCDabcd!@#$10293'
-print(pw)
-
 def collect_pw(pw):
     def create_password_checker(min_uppercase, min_lowercase, min_punctuation, mindigits):
         def uppercase_check():
@@ -67,5 +63,7 @@ def collect_pw(pw):
 
     return create_password_checker
 
+pw = 'ABCDabcd!@#$10293'
+print(pw)
 a = collect_pw(pw)
 a(4, 2, 3, 4)
