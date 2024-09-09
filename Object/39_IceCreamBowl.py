@@ -45,7 +45,7 @@ class Shelf():
             self.shelf.append(one_book)
     
     def __repr__(self):
-        return '\n'.join(book for book in self.shelf)
+        return '\n'.join(str(book) for book in self.shelf)
 
     def total_price(self):
         return sum(book.price for book in self.shelf)
