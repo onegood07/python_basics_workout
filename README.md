@@ -5,4 +5,8 @@
 ~~2. 문자열 - Stirng~~  
 ~~3. 리스트와 튜플 - ListAndTuple~~  
 ~~4. 딕셔너리와 세트 - DictionaryAndSet~~  
-5. 파일 - File
+~~5. 파일 - File~~  
+~~6. 함수 - Function~~  
+~~7. 함수형 프로그래밍 - FunctionalProgramming~~  
+~~8. 모듈과 패키지 - ModuleAndPackage~~  
+9. 객체 - Object
