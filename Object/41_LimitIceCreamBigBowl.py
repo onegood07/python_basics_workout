@@ -19,6 +19,7 @@ class Bowl():
     def __repr__(self):
         return '\n'.join(scoop.flavor for scoop in self.scoops)
     
+# Bowl 부모 클래스, BigBowl이 자식 클래스
 class BigBowl(Bowl):
     max_scoops = 5
 
