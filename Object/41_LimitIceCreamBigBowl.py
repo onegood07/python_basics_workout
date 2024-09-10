@@ -33,3 +33,24 @@ b.add_scoops(s1, s2)
 b.add_scoops(s3)
 b.add_scoops(s4, s5)
 print(b)
+
+
+
+
+# [추가 문제]
+class Loaf():
+    def __init__(self, calories, carbohydrates, sodium, sugar, fat):
+        self.calories = calories
+        self.carbohydrates = carbohydrates
+        self.sodium = sodium
+        self.sugar = sugar
+        self.fat = fat
+
+    def get_nutrition(self, count):
+        nutrients = {'calories': self.calories, 
+                     'carbohydrates': self.carbohydrates,
+                     'sodium': self.sodium, 
+                     'sugar': self.sugar, 
+                     'fat': self.fat}
+
+        return {key: value * count for key, value in nutrients.items()}
