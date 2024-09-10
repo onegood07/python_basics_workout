@@ -38,9 +38,9 @@ class Person():
     def __init__(self, name, age):
         self.name = name
         self.age = age
+        # 클래스의 속성을 변경하려면 self.속성이 아닌 클래스_이름.속성임을 기억하기
         Person.population += 1
     
-   
 p1 = Person('p1', 20)
 p2 = Person('p2', 21)
 p3 = Person('p3', 21)

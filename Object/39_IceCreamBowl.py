@@ -61,9 +61,3 @@ shelf.add_book(b3)
 print(shelf)
 
 print(f"Total price: ${shelf.total_price():.2f}")
-
-
-
-        
-
-    
